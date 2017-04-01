@@ -1,17 +1,163 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">播放视频</div>
+    <!--使用videojs-->
+    <link href="//vjs.zencdn.net/5.19.0/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/5.19.0/video.js"></script>
 
-                <div class="panel-body">
-                    这个是播放视频的页面
-                </div>
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script>videojs.options.flash.swf = "video-js.swf";</script>
+
+    <style>
+        *{
+            font-family: "微软雅黑";
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul{
+            list-style-type: none;
+        }
+    </style>
+    <div class="container">
+
+        <ol class="breadcrumb">
+            <li><a href="#">大分类</a> </li>
+            <li><a href="#">小分类</a></li>
+        </ol>
+        <ol style="font-size: large">
+            <li class="active">我是标题我是标题我是标题标题标题标题</li>
+        </ol>
+        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto"
+               poster="http://video-js.zencoder.com/oceans-clip.png" data-setup="{}">
+            <!--poster中是视频封面，可用本网站的设计图标-->
+            <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+            <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+            <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/ogg' />
+            <!--支持的视频格式-->
+            <p class="vjs-no-js">
+                请更新浏览器或推荐使用谷歌浏览器<a href="http://videojs.com/html5-video-support/" target="_blank">支持html5视频播放</a>
+                的浏览器访问</p>
+        </video>
+
+        <div class="h">
+            <h3>
+                <a target="_blank" href="#">
+                    猜你喜欢
+                </a>
+            </h3>
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-xs-12">
+                <ul>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img src="images/work001.jpg" alt="NEUSV">
+                                    <div class="caption">
+                                        <ul>
+                                            <li class="title">
+                                                <a href="#" target="_blank">【视频】标题</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img src="images/work001.jpg" alt="NEUSV">
+                                    <div class="caption">
+                                        <ul>
+                                            <li class="title">
+                                                <a href="#" target="_blank">【视频】标题</a>
+                                            </li>
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="images/work001.jpg" alt="NEUSV">
+                                    <div class="caption">
+                                        <ul>
+                                            <li class="title">
+                                                <a href="#" target="_blank">【视频】标题</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="images/work001.jpg" alt="NEUSV">
+                                    <div class="caption">
+                                        <ul>
+                                            <li class="title">
+                                                <a href="#" target="_blank">【视频】标题</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="images/work001.jpg" alt="NEUSV">
+                                    <div class="caption">
+                                        <ul>
+                                            <li class="title">
+                                                <a href="#" target="_blank">【视频】标题</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img src="images/work001.jpg" alt="NEUSV">
+                                    <div class="caption">
+                                        <ul>
+                                            <li class="title">
+                                                <a href="#" target="_blank">【视频】标题</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--垂直分割线-->
+
+            <div class="col-md-4 col-md-offset-1">
+                <h4>我是标题我是标题我是标题我是标题我是标题我是标题</h4>
+                <p><b>上传用户：</b>
+                    <span><a href="#">杨洋</a></span></p>
+                <p><b>上传时间：</b><span>2017-02-22</span></p>
+                <p><b>播放次数：</b><span>3333</span>次</p>
+                <p><b>内容介绍：</b></p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                    我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                </p>
             </div>
         </div>
     </div>
-</div>
+
+    <!--设置自动播放-->
+    <script type="text/javascript">
+        var myPlayer = videojs('my-video');
+        videojs("my-video").ready(function(){
+            var myPlayer = this;
+            myPlayer.play();
+        });
+    </script>
+
 @endsection
